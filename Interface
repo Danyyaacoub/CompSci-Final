@@ -1,0 +1,8 @@
+public interface Interface
+{
+    
+    String getFirstName();
+    
+    String getLastName();
+    
+}
