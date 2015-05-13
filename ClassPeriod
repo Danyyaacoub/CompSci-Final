@@ -1,0 +1,15 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public class ClassPeriod
+{
+    private ArrayList <Student> period;
+    private int numstudents;
+    
+    public ClassPeriod() {}
+    
+    public void addStudent(Student stu)
+    {
+        period.add(stu);
+        numstudents++;
+    }
+}
