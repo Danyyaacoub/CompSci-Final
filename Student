@@ -1,0 +1,30 @@
+public class Student implements Interface
+{
+    
+    private String firstname;
+    private String lastname;
+    private String IDnumber;
+
+    public Student(String fname, String lname, String ID)
+    {
+        firstname = fname;
+        lastname = lname;
+        IDnumber = ID;
+    }
+
+    public String getFirstName() 
+    {
+        return firstname;
+    }
+
+    public String getLastName() 
+    {
+        return lastname;
+    }
+
+    public String getID() 
+    {
+        return IDnumber;
+    }
+
+}
