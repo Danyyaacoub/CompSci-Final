@@ -1,0 +1,35 @@
+
+import java.util.Date;
+import java.text.SimpleDateFormat;
+/**
+ * Write a description of class Time here.
+ * 
+ * @author (your name) 
+ * @version (a version number or a date)
+ */
+public class Time
+{ 
+    private static Date start;
+    private static Date end;
+  
+    public static void clockIn() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+        Date start = new Date();
+        System.out.println("Clocked in at: " + dateFormat.format(start));
+       
+    }
+
+    public static void clockOut() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("EEE, d MMM yyyy HH:mm");
+        Date end = new Date();
+        System.out.println("Clocked out at: " + dateFormat.format(end));
+        
+    }
+ 
+    public static void timeClocked() {
+        System.out.println("Time clocked: " + (end.getHours() - start.getHours()));
+        System.out.print(":" + (end.getMinutes() - start.getMinutes()));
+        System.out.print(":" + (end.getSeconds() - start.getSeconds()));
+        
+    }
+}
