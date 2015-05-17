@@ -1,15 +1,14 @@
-public class Student implements Interface
-{
-    
-    private String firstname;
-    private String lastname;
-    private String IDnumber;
+import java.util.Date;
+import java.util.ArrayList;
 
-    public Student(String fname, String lname, String ID)
+public class Student extends Frame implements Interface
+{
+    public Student(String fname, String lname, String ID, double Payrate)
     {
         firstname = fname;
         lastname = lname;
         IDnumber = ID;
+        pay = Payrate;
     }
 
     public String getFirstName() 
@@ -27,4 +26,20 @@ public class Student implements Interface
         return IDnumber;
     }
 
+    public double getPay()
+    {
+        return pay;
+    }
+    
+    public void addStu(Student stu)
+    {
+        students.add(stu);
+        student++;
+    }
+    public String firstname;
+    public String lastname;
+    public String IDnumber;
+    public double pay;
+    public ArrayList <Student> students;
+    public int student;
 }
