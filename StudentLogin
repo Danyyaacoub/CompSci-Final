@@ -1,0 +1,41 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class StudentLogin extends JFrame {
+
+public static void main(String[] args) {
+StudentLogin frameTabel = new StudentLogin();
+}
+
+JButton blogin = new JButton("Clock Out");
+JPanel panel = new JPanel();
+JLabel label = new JLabel("Welcome!");
+
+StudentLogin(){
+super("Student Home");
+setSize(300,200);
+setLocation(500,280);
+panel.setLayout (null); 
+
+
+
+blogin.setBounds(110,100,80,20);
+panel.add(label);
+panel.add(blogin);
+
+
+getContentPane().add(panel);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setVisible(true);
+actionlogin();
+}
+
+public void actionlogin(){
+blogin.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+
+}
+});
+}
+}
