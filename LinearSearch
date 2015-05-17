@@ -1,0 +1,22 @@
+import java.util.Scanner;
+class LinearSearch extends Student
+{
+    public static void main(String args[])
+    {
+        
+    }
+    
+    public LinearSearch()
+    {
+        super();
+        boolean valid = false;
+        for (int o = 0; o < student; o++)
+        {
+            if (students.get(o).compareto(txuser.getText()) == 0)
+            {
+                valid = true;
+            }
+        }
+   }
+}
+
