@@ -1,0 +1,51 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+public class TeacherLogin extends JFrame {
+    public static void main(String[] args) {
+TeacherLogin frameTabel = new TeacherLogin();
+}
+JTextField pass = new JPasswordField(15);
+JButton login = new JButton("Login");
+JPanel panel = new JPanel();
+TeacherLogin(){
+super("Teacher Login");
+setSize(300,200);
+setLocation(500,280);
+panel.setLayout (null); 
+
+
+
+pass.setBounds(70,65,150,20);
+login.setBounds(100, 100, 100, 20);
+
+panel.add(login);
+
+panel.add(pass);
+
+getContentPane().add(panel);
+setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+setVisible(true);
+actionlogin();
+}
+
+public void actionlogin(){
+login.addActionListener(new ActionListener() {
+public void actionPerformed(ActionEvent ae) {
+
+String ppaswd = pass.getText();
+if(ppaswd.equals("Teacher1234")) {
+Log login = new Log();
+login.setVisible(true);
+dispose();
+} else {
+
+JOptionPane.showMessageDialog(null,"Wrong Password / Username");
+pass.setText("");
+
+}
+
+}
+});
+}
+}
