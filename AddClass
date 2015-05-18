@@ -1,0 +1,49 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Date;
+public class AddClass extends JFrame {
+    public static void main(String[] args) {
+        Frame AddClass = new Frame();
+
+    }
+    JPanel panel = new JPanel();
+    JTextField Name = new JTextField();
+    JTextField StartT = new JTextField();
+    JTextField EndT = new JTextField();
+    JButton enter = new JButton();
+    AddClass(){
+        super("Add Class");
+        setSize(300,200);
+        setLocation(500,280);
+        panel.setLayout(null);
+
+        Name.setBounds(70,20, 150,20);
+        StartT.setBounds(70,50, 150,20);
+        EndT.setBounds(70,80, 150,20);
+        enter.setBounds(70,110, 150,20);
+        panel.add(Name);
+        panel.add(StartT);
+        panel.add(EndT);
+        panel.add(enter);
+
+        getContentPane().add(panel);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        actionadd();
+    }
+
+    public void actionadd() {
+        enter.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent ae)
+                {
+                   String className = Name.getText();
+                   String startT = StartT.getText();
+                   String endT = EndT.getText();
+                   ClassPeriod newC = new ClassPeriod(className, startT, endT);
+                }
+
+            });
+    }
+}
