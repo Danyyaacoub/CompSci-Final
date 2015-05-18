@@ -1,0 +1,42 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.DefaultButtonModel;
+public class AddStu extends JFrame
+{
+    public static void main (String[] args)
+    {
+        Frame frameTabel = new Frame();
+    }
+    
+    JPanel panel = new JPanel();
+    JButton create = new JButton("Create Student");
+    JTextField fname = new JTextField("First Name");
+    JTextField lname = new JTextField("Last Name");
+    JTextField ID = new JTextField("ID Number");
+    JTextField payrate = new JTextField("Pay Rate (xx.xx)");
+    
+    public AddStu()
+    {
+        super("Create New Student");
+        setSize(300,250);
+        setLocation(500,280);
+        panel.setLayout (null);
+        
+        fname.setBounds(50,20,200,20);
+        lname.setBounds(50,50,200,20);
+        ID.setBounds(50,80,200,20);
+        payrate.setBounds(50,110,200,20);
+        create.setBounds(50,150,200,20);
+        
+        panel.add(fname);
+        panel.add(lname);
+        panel.add(ID);
+        panel.add(payrate);
+        panel.add(create);
+        
+        getContentPane().add(panel);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+}
