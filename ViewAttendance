@@ -1,0 +1,75 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.DefaultButtonModel;
+public class ViewAtt extends JFrame
+{
+    public static void main (String[] args)
+    {
+        Frame frameTabel = new Frame();
+    }
+    
+    JPanel panel = new JPanel();
+    JButton create1 = new JButton("Add Student");
+    JButton create2 = new JButton("Add Student");
+    JButton create3 = new JButton("Add Student");
+    JButton create4 = new JButton("Add Student");
+    JButton create5 = new JButton("Add Student");
+    JButton create6 = new JButton("Add Student");
+    JButton create7 = new JButton("Add Student");
+    JButton create8 = new JButton("Add Student");
+    JButton back = new JButton("Go Back");
+    JTable p1 = new JTable(35, 2);
+    JTable p2 = new JTable(35, 2);
+    JTable p3 = new JTable(35, 2);
+    JTable p4 = new JTable(35, 2);
+    JTable p5 = new JTable(35, 2);
+    JTable p6 = new JTable(35, 2);
+    JTable p7 = new JTable(35, 2);
+    JTable p8 = new JTable(35, 2);
+    Scrollbar scroll = new Scrollbar();
+    
+    public ViewAtt()
+    {
+        super("Attendance");
+        setSize(500, 1000);
+        panel.setLayout (null);
+        
+        p1.setBounds(25, 25, 200, 1000);
+        p2.setBounds(275, 25, 200, 1000);
+        p3.setBounds(25, 1075, 200, 1000);
+        p4.setBounds(275, 1075, 200, 1000);
+        p5.setBounds(25, 2125, 200, 1000);
+        p6.setBounds(275, 2125, 200, 1000);
+        p7.setBounds(25, 3175, 200, 1000);
+        p8.setBounds(275, 3175, 200, 1000);
+        
+        panel.add(scroll);
+        panel.add(p1);
+        panel.add(p2);
+        panel.add(p3);
+        panel.add(p4);
+        panel.add(p5);
+        panel.add(p6);
+        panel.add(p7);
+        panel.add(p8);
+        
+        getContentPane().add(panel);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+        actionadd();
+    }
+    
+    public void actionadd()
+    {
+        back.addActionListener(new ActionListener()
+            {
+                public void actionPerformed(ActionEvent ae)
+                {
+                   dispose();
+                   TeacherHome thome = new TeacherHome();
+                   thome.setVisible(true);
+                }
+            });
+    }
+}
